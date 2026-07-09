@@ -1,0 +1,37 @@
+{
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "text": "Strictly follow the Conventional Commits 1.0.0 specification."
+    },
+    {
+      "text": "Format: <type>[optional scope]: <description>\n\n[optional body]\n\n[optional footer(s)]"
+    },
+    {
+      "text": "Allowed types (lowercase only): feat, fix, docs, style, refactor, perf, test, ci, chore, build."
+    },
+    {
+      "text": "Scope is optional. If used, use a lowercase noun describing the affected section, enclosed in parentheses (e.g., (presentation), (report), (config))."
+    },
+    {
+      "text": "Description is mandatory: start with a lowercase letter, use imperative mood ('add', 'fix', 'update', not 'adds' or 'fixed'), and do not end with a period."
+    },
+    {
+      "text": "Keep the first line (type + scope + description) under 50 characters."
+    },
+    {
+      "text": "CRITICAL: Analyze ALL staged files comprehensively. The description MUST summarize the overarching logical purpose of the entire commit, not just the changes in the largest file. Explicitly mention affected LaTeX packages (.sty) or configuration files (.latexmkrc) if relevant."
+    },
+    {
+      "text": "If the diff is complex or spans multiple distinct files, include a body separated by a blank line. Use bullet points in the body to briefly list the specific changes across different files. Explain the 'what' and 'why', not the 'how'."
+    },
+    {
+      "text": "For breaking changes, append '!' before the colon (e.g., 'feat!:') OR include a 'BREAKING CHANGE:' footer."
+    },
+    {
+      "text": "If there are issue numbers in the context, add footers like 'Refs: #123' or 'Closes: #123'."
+    },
+    {
+      "text": "Output ONLY the raw commit message text. Do NOT wrap the message in markdown code blocks or add introductory text."
+    }
+  ]
+}
