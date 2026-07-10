@@ -28,19 +28,19 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           submodules: recursive 
 
       - name: Compile ${{ matrix.document }}
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@v4
         with:
           root_file: ${{ matrix.document }}.tex
           compiler: latexmk
-          args: -halt-on-error
+          args: "-halt-on-error"
 
       - name: Upload PDF Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: ${{ matrix.document }}-pdf
           path: build/${{ matrix.document }}.pdf
